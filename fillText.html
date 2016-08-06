@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var cvs=document.getElementById('canvas');
+            var cxt=cvs.getContext('2d');
+
+            cxt.beginPath();
+            cxt.lineWidth=1;
+            cxt.strokeStyle='red';
+            cxt.fillStyle='yellow';
+            cxt.fillRect(0,0,200,200);
+
+
+
+            cxt.fillStyle='blue';
+
+            var tex='不要怂';
+            cxt.font='italic 20px sans-serif';
+            cxt.textBaseline = 'top';
+            cxt.strokeText(tex,0,0);
+            var length=cxt.measureText(tex);
+            cxt.fillText('length:'+length.width+'.',0,100);
+
+
+            //cxt.fillText(,0,100)
+
+
+
+
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border:1px solid darkcyan">请更新浏览器</canvas>
+
+</body>
+</html>

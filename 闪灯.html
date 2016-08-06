@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var cvs=document.getElementById('canvas');
+            var cxt=cvs.getContext('2d');
+            var timer=null;
+            var i=0;
+
+            cxt.beginPath();
+            cxt.lineWidth=10;
+
+            timer=setInterval(function(){
+
+               if(i==0) {
+                   cxt.fillStyle = 'red';
+                   cxt.arc(100, 100, 50, 0, 360 * Math.PI / 180);
+                   cxt.fill();
+                    i=1;
+               }
+                else {
+
+                   cxt.clearRect(0,0,500,500);
+                   i=0;
+
+               }
+
+
+            },30)
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="background-color: #0a0a0a">
+    更新浏览器
+</canvas>
+</body>
+</html>

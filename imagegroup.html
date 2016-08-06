@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function()
+        {
+            var cvs=document.getElementById('canvas');
+            var cxt=cvs.getContext('2d');
+            var str=new Array('source-over','destination-over','source-in','destination-in','source-out','destination-out','lighter','xor','copy');
+            var i=0;
+            var timer=null;
+
+            cxt.beginPath();
+            cxt.lineWidth=10;
+            cxt.strokeStyle='red';
+
+
+            timer=setInterval(function(){
+                if(i>=9)
+                i=0;
+                cxt.fillStyle='green';
+                cxt.fillRect(100,100,200,200);
+                cxt.globalCompositeOperation=str[i];
+                i++;
+                cxt.fillStyle='yellow';
+                cxt.arc(300,300,100,100,0,360*Math.PI/180);
+                cxt.fill()
+
+
+            },2000)
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="900" height="600" style="background:darkcyan">
+    下载高版本浏览器
+</canvas>
+</body>
+</html>

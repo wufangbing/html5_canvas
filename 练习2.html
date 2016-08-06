@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function()
+        {
+            var cvs=document.getElementById('canvas');
+            var cxt=cvs.getContext('2d');
+            cxt.lineWidth=1;
+            cxt.fillStyle='red';
+            cxt.beginPath();
+
+//            var image=new Image();
+//            image.src='images/1.jpg';
+//
+//
+//            image.onload=function()
+//            {
+//
+//                var boat=cxt.createPattern(image,'repeat-x');
+//                cxt.fillStyle=boat;
+//
+//                cxt.arc(100,100,50,0,360*Math.PI/180,true);
+//                cxt.clip();
+//                cxt.fillRect(0,0,300,300);
+//                cxt.fillStyle='blue';
+//                cxt.fillRect(300,300,100,100);
+//            }
+
+
+
+//            cxt.font='italic 20px sans-serif';
+//            cxt.fillRect(0,0,200,200);
+//            cxt.fillStyle='blue';
+//            var str='啪啪啪';
+//            cxt.textBaseline='top';
+//            cxt.fillText(str,00,00);
+//            cxt.fillText('length='+cxt.measureText('啪啪啪啪').width,50,50);
+//
+//
+//            cxt.strokeText('啪啪啪啪',100,100);
+
+            cxt.fillRect(0,0,100,100);
+           // window.open(cvs.toDataURL('images/1.jpg'),'smallwin','width=400,height=4=350');
+            window.open(cvs.toDataURL("images/1.jpg"),"smallwin","width=400,height=350");
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+ <canvas id="canvas" width="1000" height="1000" style="background:navajowhite">
+     更新浏览器
+ </canvas>
+</body>
+</html>

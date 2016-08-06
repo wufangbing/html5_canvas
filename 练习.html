@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		window.onload=function(){
+			var cvs=document.getElementById('canvas');
+			var cxt=cvs.getContext('2d');
+			cxt.beginPath();
+			cxt.lineHeight=10;
+			cxt.strokeStyle='rgba(255,0,0,1)';
+			cxt.fillStyle='blue';
+//			cxt.fillRect(0,0,100,100);
+//
+//
+//			cxt.fillStyle='yellow'
+//			cxt.fillRect(100,100,100,100);
+//
+//			cxt.clearRect(0,0,50,50);
+//			cxt.clearRect(100,100,50,50)
+//
+//
+//			cxt.strokeStyle='blue';
+//			cxt.arc(50,200,50,0,360*Math.PI/180,true);
+//			cxt.fill();
+//			cxt.stroke();
+//			cxt.closePath();
+//
+//
+//			cxt.beginPath();
+//			cxt.arc(100,400,50,0,180*Math.PI/180,true)
+//			cxt.fill();
+//			cxt.save();
+//			cxt.closePath()
+
+//			cxt.beginPath();
+//			cxt.moveTo(0,0);
+//			cxt.lineTo(300,300);
+//			cxt.lineTo(600,600);
+//			cxt.stroke();
+
+//			cxt.beginPath();
+//			cxt.moveTo(0,0);
+//			cxt.bezierCurveTo(200,200,150,50,400,400);
+//			cxt.quadraticCurveTo(150, 250, 250, 250);
+//			cxt.stroke();
+//			cxt.closePath();
+
+//			cxt.beginPath();
+//			var lg=cxt.createLinearGradient(0,0,200,200);
+//			lg.addColorStop(0,'rgb(255,0,0)');
+//			lg.addColorStop(0.5,'rgb(0,255,0)');
+//			lg.addColorStop(1,'rgb(0,0,255)');
+//			cxt.fillStyle=lg;
+//			cxt.arc(0,0,200,0,360*Math.PI/180,true);
+//			cxt.fill();
+
+//			cxt.beginPath();
+//			var rg=cxt.createRadialGradient(100,100,50,100,100,100);
+//			rg.addColorStop(0,'rgb(255,0,0)');
+//			rg.addColorStop(0.5,'rgb(0,255,0)');
+//			rg.addColorStop(1,'rgb(0,0,255)');
+//			cxt.fillStyle=rg;
+//			cxt.arc(100,100,100,0,360*Math.PI/180,true);
+//			cxt.fill();
+
+//			cxt.beginPath();
+//			var rg=cxt.createRadialGradient(50,100,50,400,100,100);
+//			rg.addColorStop(0,'rgb(255,0,0)');
+//			rg.addColorStop(0.5,'rgb(0,255,0)');
+//			rg.addColorStop(1,'rgb(0,0,255)');
+//			cxt.fillStyle=rg;
+//			cxt.fillRect(0,0,600,600);
+
+//			cxt.beginPath();
+//			cxt.lineWidth=10;
+//			cxt.fillStyle='red';
+//			cxt.strokeStyle='blue';
+//			cxt.translate(100,100);
+//			cxt.scale(0.5,0.5);
+//			cxt.rotate(30*Math.PI/180);
+//			cxt.fillRect(0,0,100,100);
+//			cxt.save();
+//			cxt.closePath();
+//
+//			cxt.beginPath();
+//			cxt.lineWidth=10;
+//			cxt.fillStyle='red';
+//			cxt.strokeStyle='blue';
+//
+//			cxt.translate(100,100);
+////			cxt.scale(0.1,0.1);
+//			cxt.rotate(90*Math.PI/180);
+//			cxt.fillRect(100,100,100,100);
+
+//
+//			cxt.beginPath();
+//			cxt.lineWidth=10;
+//			cxt.strokeStyle='red';
+//			cxt.fillStyle='yellow';
+//			cxt.fillRect(0,0,200,200);
+//			cxt.save();
+//			cxt.translate(100,100);
+//			cxt.restore();
+
+			cxt.beginPath();
+			cxt.lineWidth=10;
+			cxt.strokeStyle='red';
+
+
+			cxt.shadowOffsetX=10;
+			cxt.shadowOffsetY=10;
+			cxt.shadowColor='red';
+			cxt.shadowBlur=15;
+
+			cxt.fillStyle='blue';
+			cxt.fillRect(50,50,100,100);
+			cxt.closePath();
+
+			cxt.fillStyle='pink';
+			cxt.fillRect(200,200,100,100);
+
+
+//			cxt.globalCompositeOperation='copy';
+//
+//			cxt.fillStyle='green';
+//			cxt.arc(100,100,50,0,360*Math.PI/180,true);
+//			cxt.fill();
+
+
+
+//			cxt.fillStyle='pink';
+//			cxt.textBaseline='top';
+//			cxt.fillText('hello world',10,10);
+//			cxt.font='italic 20px sans-serif';
+//			cxt.fillText('length is'+cxt.measureText('hello world').width,100,100);
+
+
+
+
+
+
+
+		}
+
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="700" height="700" style="background-color: darkcyan">
+		更新浏览器
+	</canvas>
+</body>
+</html>

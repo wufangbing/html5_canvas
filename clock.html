@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function() {
+            var clockId=document.getElementById('canvas');
+            var clock=clockId.getContext('2d');
+
+            function drawColok(){
+                clock.clearRect(0,0,1000,1000);
+
+                //获取当时时间
+                var time=new Date();
+                var h=time.getHours();
+                var m=time.getMinutes();
+                var s=time.getSeconds();
+                //转化为12小时
+                            h=h>12?h-12:h;
+                            if(h<10)
+                            h='0'+h;
+                            if(m<10)
+                            m='0'+m;
+                            if(s<10)
+                            s='0'+s;
+                //绘制时间
+                clock.save();//********************初始化
+
+                clock.translate(0,500);
+                clock.strokeStyle='red';
+                clock.fillStyle='green';
+                clock.font='bold 50px 微软雅黑';
+                clock.fillText("系统当前时间为："+h+"时"+m+"分"+s+"秒", 100, 100);
+                clock.restore();
+
+
+
+                //画表盘
+                clock.beginPath();
+                clock.lineWidth=10;
+                clock.strokeStyle='blue';
+                clock.arc(300, 300, 200, 0, 360, false);
+                clock.stroke();
+                clock.closePath();
+
+                clock.restore();
+                //时画刻度
+                for(i=0;i<12;i++)
+                {
+                    clock.save();
+                    clock.translate(300,300);       //把原点定位到300,300(圆心)
+                    clock.lineWidth=7;
+                    clock.strokeStyle='yellow';
+                    clock.rotate(i*30*Math.PI/180);
+
+                    clock.beginPath();
+                    clock.moveTo(0,-170);
+                    clock.lineTo(0,-190);
+                    clock.stroke();
+                    clock.restore();            //回到愿状态,否者会第二次旋转
+
+                }
+
+                //画分钟刻度
+                for(j=0;j<60;j++)
+                {
+                    clock.save();
+                    clock.lineWidth=5;
+                    clock.strokeStyle='gray';
+                    clock.translate(300,300);
+                    clock.rotate(j*6*Math.PI/180);
+                    clock.beginPath();
+                    clock.moveTo(0,-180);
+                    clock.lineTo(0,-190);
+                    clock.stroke();
+                    clock.closePath();
+                    clock.restore();
+
+                }
+
+                //画时针,分针,秒针
+
+
+                clock.save();
+                clock.beginPath();
+                clock.lineWidth=7;
+                clock.strokeStyle='green';
+                clock.translate(300,300);
+                clock.rotate(h*30*Math.PI/180);
+                clock.moveTo(0,15);
+                clock.lineTo(0,-120);
+                clock.stroke();
+                clock.closePath();
+                clock.restore();
+
+
+
+                clock.save();
+                clock.beginPath();
+                clock.lineWidth=7;
+                clock.strokeStyle='red';
+                clock.translate(300,300);
+                clock.rotate(m*6*Math.PI/180);
+                clock.moveTo(0,15);
+                clock.lineTo(1,-140);
+                clock.stroke();
+                clock.closePath();
+                clock.restore();
+
+                clock.save();
+                clock.beginPath();
+                clock.lineWidth=7;
+                clock.strokeStyle='blue';
+                clock.translate(300,300);
+                clock.rotate(s*6*Math.PI/180);
+                clock.moveTo(0,15);
+                clock.lineTo(0,-180);
+                clock.stroke();
+                clock.closePath();
+                clock.restore();
+
+
+            }
+
+            drawColok();
+        setInterval(drawColok,1000);
+
+
+        }
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="1000" style="background:white">
+    下载高版本浏览器
+</canvas>
+</body>
+</html>

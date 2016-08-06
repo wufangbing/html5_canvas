@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function()
+        {
+            var cvs=document.getElementById('canvas');
+            var cxt=cvs.getContext('2d');
+            var timer=null;
+            var i=1;
+            cxt.beginPath();
+            cxt.lineWidth=10;
+            cxt.strokeStyle='red';
+            cxt.fillStyle='green';
+
+            cxt.fillRect(600,400,100,50);
+
+            cxt.translate(600,400);
+            cxt.fillRect(0,0,100,50);
+            timer=setInterval(function(){
+                i++
+                cxt.rotate(i*Math.PI/180);
+                cxt.fillRect(0,0,100,50);
+
+
+            },100)
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="900" height="600" style="background:darkcyan">
+    下载高版本浏览器
+</canvas>
+</body>
+</html>

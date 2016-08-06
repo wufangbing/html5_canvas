@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var cvs=document.getElementById('canvas');
+            var cxt=cvs.getContext('2d');
+
+            cxt.beginPath();
+            cxt.lineWidth=10;
+            cxt.strokeStyle='red';
+            cxt.fillStyle='blue';
+            cxt.save();
+//           var image=new Image();
+//            image.src='images/1.jpg';
+//            image.onload=function()
+//            {
+//                cxt.drawImage(image,10,10,200,200);
+//
+//
+//            }
+
+//
+//            var image=new Image();
+//            image.src='images/1.jpg';
+//            image.onload=function() {
+//                var boat = cxt.createPattern(image, 'repeat-y');
+//                cxt.fillStyle = boat;
+//                cxt.fillRect(0, 0, 500, 500);
+//                cxt.closePath();
+//
+//            }
+//            cxt.arc(100,100,50,0,360*Math.PI/180,true);
+//
+//            cxt.clip();
+            cxt.fillStyle='red';
+            cxt.fillRect(0,0,100,100);
+            cxt.restore()
+            cxt.fillRect(100,100,100,100);
+            cxt.closePath();
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border:1px solid darkcyan">请更新浏览器</canvas>
+</body>
+</html>
